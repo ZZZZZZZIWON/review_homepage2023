@@ -58,6 +58,7 @@ public class TempController {
 		
 		return "forward:/temp/selectList.do";
 	}
+<<<<<<< HEAD
 	
 	// 임시 데이터 수정하기
 	@RequestMapping(value="/temp/update.do")
@@ -74,5 +75,7 @@ public class TempController {
 		
 		return "forward:/temp/selectList.do";
 	}
+=======
+>>>>>>> branch 'master' of https://github.com/ZZZZZZZIWON/review_homepage2023.git
 
 }

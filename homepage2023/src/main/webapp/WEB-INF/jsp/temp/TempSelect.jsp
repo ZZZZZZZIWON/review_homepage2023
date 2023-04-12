@@ -8,6 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Language" content="ko">
+<<<<<<< HEAD
 <title>SELECT</title>
 <script src="https://code.jquery.com/jquery-Latest.min.js"></script>
 <style>
@@ -29,8 +30,13 @@ button {
 	margin-top: 10px;
 }
 </style>
+=======
+<title>데이터 가져오기</title>
+<script src="https://code.jquery.com/jquery-Latest.min.js"></script>
+>>>>>>> branch 'master' of https://github.com/ZZZZZZZIWON/review_homepage2023.git
 </head>
 <body>
+<<<<<<< HEAD
 	<table>
 		<thead>
 			<tr>
@@ -55,6 +61,20 @@ button {
 		</c:url>
 		<a href="${delUrl}" class="btn-del"><button type="button">삭제</button></a> 
 		<a href="/temp/selectList.do"><button type="button">목록</button></a>
+=======
+	${result.tempId} : ${result.tempVal}
+
+	<div class="box-btn">
+		<c:url var="uptUrl" value="/temp/tempRegist.do">
+			<c:param name="tempId" value="${result.tempId}" />
+		</c:url>
+		<a href="${uptUrl}">수정</a>
+		<c:url var="delUrl" value="/temp/delete.do">
+			<c:param name="tempId" value="${result.tempId}" />
+		</c:url>
+		<a href="${delUrl}" class="btn-del">삭제</a> <a
+			href="/temp/selectList.do">목록</a>
+>>>>>>> branch 'master' of https://github.com/ZZZZZZZIWON/review_homepage2023.git
 
 	</div>
 	<script>

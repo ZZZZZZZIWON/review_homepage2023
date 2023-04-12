@@ -38,6 +38,7 @@ public class TempServiceImpl extends EgovAbstractServiceImpl implements TempServ
 		public String insertTemp(TempVO vo) throws Exception {
 			tempMapper.insertTemp(vo);
 			return null;
+<<<<<<< HEAD
 		}
 		
 		// 임시 데이터 수정하기
@@ -48,6 +49,9 @@ public class TempServiceImpl extends EgovAbstractServiceImpl implements TempServ
 		// 임시 데이터 삭제하기
 		public void deleteTemp(TempVO vo) throws Exception {
 			tempMapper.deleteTemp(vo);
+=======
+			
+>>>>>>> branch 'master' of https://github.com/ZZZZZZZIWON/review_homepage2023.git
 		}
 		
 }

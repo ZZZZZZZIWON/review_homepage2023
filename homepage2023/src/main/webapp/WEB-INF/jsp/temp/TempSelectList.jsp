@@ -8,6 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Language" content="ko">
+<<<<<<< HEAD
 <title>LIST</title>
 <script src="https://code.jquery.com/jquery-Latest.min.js"></script>
 <style>
@@ -48,6 +49,38 @@ a {
 					   </c:url>
 					<a href="${viewUrl}"><c:out value="${result.tempVal}" /></a>
 					</td>
+=======
+<title>데이터 가져오기</title>
+<script src="https://code.jquery.com/jquery-Latest.min.js"></script>
+<style>
+table {
+	border-collapse: collapse;
+}
+
+th {
+	font-weight: bold;
+}
+
+th, td {
+	padding: 5px;
+	border: 1px solid #000;
+}
+</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>TEMP_ID</th>
+				<th>TEMP_VAL</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="result" items="${resultList}">
+				<tr>
+					<td><c:out value="${result.tempId}" /></td>
+					<td><c:out value="${result.tempVal}" /></td>
+>>>>>>> branch 'master' of https://github.com/ZZZZZZZIWON/review_homepage2023.git
 				</tr>
 			</c:forEach>
 		</tbody>
