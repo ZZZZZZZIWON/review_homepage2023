@@ -8,48 +8,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Language" content="ko">
-<<<<<<< HEAD
-<title>LIST</title>
-<script src="https://code.jquery.com/jquery-Latest.min.js"></script>
-<style>
-table {
-	border-collapse: collapse;
-	text-align: center;
-}
-
-th {
-	font-weight: bold;
-}
-
-th, td {
-	padding: 5px;
-	border: 1px solid #000;
-}
-a {
-	text-decoration: none;
-	text-decoration-color: black;
-}
-</style>
-</head>
-<body>
-	<table>
-		<thead>
-			<tr>
-				<th>TEMP_ID</th>
-				<th>TEMP_VAL</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="result" items="${resultList}">
-				<tr>
-					<td><c:out value="${result.tempId}" /></td>
-					<td>
-					   <c:url var="viewUrl" value="/temp/select.do">
-					   		<c:param name="tempId" value="${result.tempId}}"/>
-					   </c:url>
-					<a href="${viewUrl}"><c:out value="${result.tempVal}" /></a>
-					</td>
-=======
 <title>데이터 가져오기</title>
 <script src="https://code.jquery.com/jquery-Latest.min.js"></script>
 <style>
@@ -65,6 +23,13 @@ th, td {
 	padding: 5px;
 	border: 1px solid #000;
 }
+a {
+	text-decoration-color: black;
+	text-decoration: none;
+}
+button {
+	margin: 5px;
+}
 </style>
 </head>
 <body>
@@ -78,20 +43,24 @@ th, td {
 		<tbody>
 			<c:forEach var="result" items="${resultList}">
 				<tr>
-					<td><c:out value="${result.tempId}" /></td>
-					<td><c:out value="${result.tempVal}" /></td>
->>>>>>> branch 'master' of https://github.com/ZZZZZZZIWON/review_homepage2023.git
+					<td><c:out value="${result.tempId}"/></td>
+					<td>
+						<c:url var="viewUrl" value="/temp/select.do">
+							<c:param name="tempId" value="${result.tempId}"/>
+						</c:url>
+						<a href="${viewUrl}"><c:out value="${result.tempVal}"/></a>	
+					</td>
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
 	<button type="button" id="btn-reg" data-href="/temp/tempRegist.do">등록하기</button>
 	<script>
-        $(document).ready(function() {
-            $("#btn-reg").click(function() {
-                location.href=$(this).data("href");
-            });
-        });
-    </script>
+		$(document).ready(function() {
+			$("#btn-reg").click(function() {
+				location.href = $(this).data("href");
+			});
+		});
+	</script>
 </body>
 </html>

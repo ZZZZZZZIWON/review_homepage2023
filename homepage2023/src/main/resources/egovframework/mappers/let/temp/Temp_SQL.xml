@@ -30,7 +30,6 @@
 			)
 	</insert>
 	
-<<<<<<< HEAD
 	<update id="updateTemp" parameterType="egovframework.let.temp.service.TempVO">
 		UPDATE lettemp SET
 			TEMP_VAL = #{tempVal}
@@ -41,6 +40,4 @@
 		DELETE FROM lettemp
 		WHERE TEMP_ID = #{tempId}
 	</delete>
-=======
->>>>>>> branch 'master' of https://github.com/ZZZZZZZIWON/review_homepage2023.git
 </mapper>
